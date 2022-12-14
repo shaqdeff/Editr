@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentEditable from 'react-contenteditable';
-import { getCursorCoordinates, setCursorToEnd } from '../../helpers/cursorSet';
 import SelectMenu from '../SelectMenu/SelectMenu';
+import { getCursorCoordinates, setCursorToEnd } from '../../helpers/cursorSet';
 import './TextBlock.css';
 
 const CMD_KEY = '/';
@@ -17,7 +17,7 @@ class TextBlock extends React.Component {
     this.tagSelectionHandler = this.tagSelectionHandler.bind(this);
     this.contentEditable = React.createRef();
     this.state = {
-      htmlBackup: null,
+      htmlBackup: null, // needed to store the html temporarely
       html: '',
       tag: 'p',
       previousKey: '',
@@ -33,6 +33,9 @@ class TextBlock extends React.Component {
     this.setState({ html: this.props.html, tag: this.props.tag });
   }
 
+  // Update the page component if one of the following is true:
+  // 1. user has changed the html content
+  // 2. user has changed the tag
   componentDidUpdate(prevProps, prevState) {
     const htmlChanged = prevState.html !== this.state.html;
     const tagChanged = prevState.tag !== this.state.tag;
@@ -51,9 +54,14 @@ class TextBlock extends React.Component {
 
   onKeyDownHandler(e) {
     if (e.key === CMD_KEY) {
+      // If the user starts to enter a command, we store a backup copy of
+      // the html. We need this to restore a clean version of the content
+      // after the content type selection was finished.
       this.setState({ htmlBackup: this.state.html });
     }
     if (e.key === 'Enter') {
+      // While pressing "Enter" should add a new block to the page, we
+      // still want to allow line breaks by pressing "Shift-Enter"
       if (this.state.previousKey !== 'Shift' && !this.state.selectMenuIsOpen) {
         e.preventDefault();
         this.props.addBlock({
@@ -63,24 +71,31 @@ class TextBlock extends React.Component {
       }
     }
     if (e.key === 'Backspace' && !this.state.html) {
+      // If there is no content, we delete the block by pressing "Backspace",
+      // just as we would remove a line in a regular text container
       e.preventDefault();
       this.props.deleteBlock({
         id: this.props.id,
         ref: this.contentEditable.current,
       });
     }
+    // Store the key to detect combinations like "Shift-Enter" later on
     this.setState({ previousKey: e.key });
   }
 
+  // The openSelectMenuHandler function needs to be invoked on key up. Otherwise
+  // the calculation of the caret coordinates does not work properly.
   onKeyUpHandler(e) {
     if (e.key === CMD_KEY) {
       this.openSelectMenuHandler();
     }
   }
 
+  // After openening the select menu, we attach a click listener to the dom that
+  // closes the menu after the next click - regardless of outside or inside menu.
   openSelectMenuHandler() {
     const { x, y } = getCursorCoordinates();
-    this.setState({
+    this.setCursor({
       selectMenuIsOpen: true,
       selectMenuPosition: { x, y },
     });
@@ -96,6 +111,8 @@ class TextBlock extends React.Component {
     document.removeEventListener('click', this.closeSelectMenuHandler);
   }
 
+  // Restore the clean html (without the command), focus the editable
+  // with the caret being set to the end, close the select menu
   tagSelectionHandler(tag) {
     this.setState({ tag: tag, html: this.state.htmlBackup }, () => {
       setCursorToEnd(this.contentEditable.current);
@@ -121,7 +138,6 @@ class TextBlock extends React.Component {
           onChange={this.onChangeHandler}
           onKeyDown={this.onKeyDownHandler}
           onKeyUp={this.onKeyUpHandler}
-          placeholder={'Type / for blocks, @ to link docs or people'}
         />
       </>
     );

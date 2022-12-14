@@ -2,12 +2,9 @@ import React from 'react';
 import uid from '../../helpers/uid';
 import TextBlock from '../TextBlock/TextBlock';
 import { setCursorToEnd } from '../../helpers/cursorSet';
+import '../../index.css';
 
-const initialBlock = {
-  id: uid(),
-  html: '',
-  tag: 'p',
-};
+const initialBlock = { id: uid(), html: '', tag: 'p' };
 
 class TextEditor extends React.Component {
   constructor(props) {
@@ -58,7 +55,7 @@ class TextEditor extends React.Component {
 
   render() {
     return (
-      <div className="text-editor">
+      <div className="Page">
         {this.state.blocks.map((block, key) => {
           return (
             <TextBlock
