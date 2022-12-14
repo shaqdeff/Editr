@@ -56,7 +56,7 @@ class TextEditor extends React.Component {
   }
 
   render() {
-    return <div className="Page"></div>;
+    return <div className="text-editor"></div>;
   }
 }
 
