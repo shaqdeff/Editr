@@ -1,6 +1,6 @@
 import React from 'react';
 import { matchSorter } from 'match-sorter';
-import './SelectPopup.css';
+import './SelectMenu.css';
 
 const MENU_HEIGHT = 150;
 const allowedTags = [
