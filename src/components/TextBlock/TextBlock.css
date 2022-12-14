@@ -1,0 +1,24 @@
+.text-block {
+  margin: 15rem auto 0;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 16px;
+  width: 50%;
+  outline: none;
+}
+
+[contenteditable='true']:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: rgb(159, 158, 158);
+  font-size: 16px;
+}
+
+/* .editable-block:hover {
+  background: #f8f8f8;
+  outline-color: #c9c9ca;
+}
+
+.editable-block:focus {
+  background: #f7f8fb;
+} */
