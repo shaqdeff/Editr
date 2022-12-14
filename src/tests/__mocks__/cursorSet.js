@@ -1,6 +1,7 @@
 // Description: Get cursor coordinates
 export const getCursorCoordinates = () => {
   let x, y;
+  const isSupported = typeof window.getSelection !== 'undefined';
   if (isSupported) {
     const selection = window.getSelection();
     // Check if there is a selection (i.e. cursor in place)
