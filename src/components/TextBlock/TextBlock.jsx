@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentEditable from 'react-contenteditable';
 import { getCursorCoordinates, setCursorToEnd } from '../../helpers/cursorSet';
-import SelectPopup from '../SelectMenu/SelectMenu';
+import SelectMenu from '../SelectMenu/SelectMenu';
 import './TextBlock.css';
 
 const CMD_KEY = '/';
@@ -107,7 +107,7 @@ class TextBlock extends React.Component {
     return (
       <>
         {this.state.selectMenuIsOpen && (
-          <SelectPopup
+          <SelectMenu
             position={this.state.selectMenuPosition}
             onSelect={this.tagSelectionHandler}
             close={this.closeSelectMenuHandler}
