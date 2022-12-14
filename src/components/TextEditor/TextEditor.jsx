@@ -1,5 +1,6 @@
 import React from 'react';
 import uid from '../../helpers/uid';
+import TextBlock from '../TextBlock/TextBlock';
 import { setCursorToEnd } from '../../helpers/cursorSet';
 
 const initialBlock = {
@@ -56,7 +57,23 @@ class TextEditor extends React.Component {
   }
 
   render() {
-    return <div className="text-editor"></div>;
+    return (
+      <div className="text-editor">
+        {this.state.blocks.map((block, key) => {
+          return (
+            <TextBlock
+              key={key}
+              id={block.id}
+              tag={block.tag}
+              html={block.html}
+              updatePage={this.updatePageHandler}
+              addBlock={this.addBlockHandler}
+              deleteBlock={this.deleteBlockHandler}
+            />
+          );
+        })}
+      </div>
+    );
   }
 }
 
