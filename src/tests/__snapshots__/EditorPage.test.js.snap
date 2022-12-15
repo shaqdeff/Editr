@@ -5,6 +5,156 @@ exports[`EditorPage renders correctly 1`] = `
   className="App"
 >
   <div
+    className="navigation-container"
+  >
+    <div
+      className="left-side"
+    >
+      <div
+        className="two-arrows"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": "#7e838f",
+              "fontSize": "20px",
+              "fontWeight": "500",
+            }
+          }
+          viewBox="0 0 15 15"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M2.14645 11.1464C1.95118 11.3417 1.95118 11.6583 2.14645 11.8536C2.34171 12.0488 2.65829 12.0488 2.85355 11.8536L6.85355 7.85355C7.04882 7.65829 7.04882 7.34171 6.85355 7.14645L2.85355 3.14645C2.65829 2.95118 2.34171 2.95118 2.14645 3.14645C1.95118 3.34171 1.95118 3.65829 2.14645 3.85355L5.79289 7.5L2.14645 11.1464ZM8.14645 11.1464C7.95118 11.3417 7.95118 11.6583 8.14645 11.8536C8.34171 12.0488 8.65829 12.0488 8.85355 11.8536L12.8536 7.85355C13.0488 7.65829 13.0488 7.34171 12.8536 7.14645L8.85355 3.14645C8.65829 2.95118 8.34171 2.95118 8.14645 3.14645C7.95118 3.34171 7.95118 3.65829 8.14645 3.85355L11.7929 7.5L8.14645 11.1464Z"
+            fill="currentColor"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "#7e838f",
+            "fontSize": "18px",
+          }
+        }
+        version="1.1"
+        viewBox="0 0 17 17"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g />
+        <path
+          d="M16.592 1.152c-0.053-0.010-1.321-0.244-2.981-0.244-2.105 0-3.828 0.366-5.125 1.088-1.518-0.765-3.264-1.152-5.196-1.152-1.681 0-2.866 0.302-2.915 0.315l-0.375 0.098 0.001 13.906 0.624-0.161c0.011-0.002 1.12-0.283 2.665-0.283 1.447 0 2.771 0.24 3.96 0.703v0.828h2.5v-0.856c1.281-0.488 2.747-0.611 3.86-0.611 1.562 0 2.786 0.225 2.798 0.227l0.592 0.11v-13.891l-0.408-0.077zM1 13.907v-11.858c0.451-0.084 1.277-0.205 2.29-0.205 1.761 0 3.339 0.36 4.71 1.044v11.776c-1.403-0.617-2.977-0.945-4.71-0.945-0.969 0-1.773 0.101-2.29 0.188zM16 13.938c-0.536-0.070-1.393-0.154-2.39-0.154-1.848 0-3.381 0.298-4.61 0.855v-11.773c1.422-0.78 3.271-0.958 4.61-0.958 1.023 0 1.902 0.097 2.39 0.164v11.866z"
+        />
+      </svg>
+      <div
+        className="main-text"
+      >
+        Main
+      </div>
+      <span
+        className="slash-separator"
+      />
+      <div
+        className="started-text"
+      >
+        Getting started
+      </div>
+      <span
+        className="slash-separator"
+      />
+      <div
+        className="frontend-text"
+      >
+        Front-end developer test proje...
+      </div>
+    </div>
+    <div
+      className="right-side"
+    >
+      <div
+        className="lock-icon"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": "#878c97",
+              "fontSize": "18px",
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="11"
+            rx="2"
+            ry="2"
+            width="18"
+            x="3"
+            y="11"
+          />
+          <path
+            d="M7 11V7a5 5 0 0 1 9.9-1"
+          />
+        </svg>
+      </div>
+      <div
+        className="editing-text"
+      >
+        Editing
+      </div>
+      <span
+        className="pipe-separator"
+      />
+      <div
+        className="publish-text"
+      >
+        Publish Space
+      </div>
+      <div
+        className="down-arrow"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": "#426fae",
+              "fontSize": "22px",
+            }
+          }
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
     className="header-container"
   >
     <div
@@ -194,7 +344,7 @@ exports[`EditorPage renders correctly 1`] = `
     <p
       className="instruction"
     >
-      Hey there! 👋 You can add content below. Type / then 1 to create H1 text. Hit 'Return or Enter' after typing in your text.
+      Hey there! 👋 Feel free to add content below. Type / then 1 to create H1 text. Hit 'Return or Enter' after typing in your text.
     </p>
   </div>
 </div>
