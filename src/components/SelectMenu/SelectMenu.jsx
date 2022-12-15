@@ -28,12 +28,10 @@ class SelectMenu extends React.Component {
     };
   }
 
-  // Attach a key listener to add any given key to the command
   componentDidMount() {
     document.addEventListener('keydown', this.keyDownHandler);
   }
 
-  // Whenever the command changes, look for matching tags in the list
   componentDidUpdate(prevProps, prevState) {
     const command = this.state.command;
     if (prevState.command !== command) {
@@ -83,6 +81,15 @@ class SelectMenu extends React.Component {
       case 'Meta':
         e.preventDefault();
         break;
+      case 'ArrowLeft':
+      case 'ArrowRight':
+        e.preventDefault();
+        this.props.close();
+        break;
+      case 'Escape':
+        e.preventDefault();
+        this.props.close();
+        break;
       default:
         this.setState({ command: this.state.command + e.key });
         break;
@@ -90,7 +97,6 @@ class SelectMenu extends React.Component {
   }
 
   render() {
-    // Define the absolute position before rendering
     const x = this.props.position.x;
     const y = this.props.position.y - MENU_HEIGHT;
     const positionAttributes = { top: y, left: x };

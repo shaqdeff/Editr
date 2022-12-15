@@ -39,7 +39,6 @@ class TextEditor extends React.Component {
   }
 
   deleteBlockHandler(currentBlock) {
-    // Only delete the block, if there is a preceding one
     const previousBlock = currentBlock.ref.previousElementSibling;
     if (previousBlock) {
       const blocks = this.state.blocks;
