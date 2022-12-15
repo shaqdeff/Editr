@@ -4,7 +4,6 @@ Editr is a Notion like text editor that allows you to create a H1 text block by 
 
 - Delete text blocks simply by backspacing or pressing the delete key.
 - Edit/update your text block. Everybody deserves a second chance. Editr allows you to correct your mistakes, 'Type'ically speaking that is.
-- You can also create H2 texts by typing `/` then `2`. We know size does matter, but in this case, sometimes you just don't want **BIG** stuff all the time.
 
 ## Built With
 
@@ -40,7 +39,7 @@ git clone https://github.com/shaqdeff/Editr.git
 
 ## Install
 
-- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal (**Shortcut**: `Command` + `J` or `Control` + ` ` `) and run the following commands:
+- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal (**Shortcut**: `Command` + `J` or `Control` +  ` ) and run the following commands:
 
 ```
 npm install
