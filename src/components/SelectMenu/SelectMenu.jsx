@@ -90,6 +90,10 @@ class SelectMenu extends React.Component {
         e.preventDefault();
         this.props.close();
         break;
+      case '2':
+        e.preventDefault();
+        this.props.close();
+        break;
       default:
         this.setState({ command: this.state.command + e.key });
         break;
