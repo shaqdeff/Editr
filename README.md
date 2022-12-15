@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Editr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Editr is a Notion like text editor that allows you to create a H1 text block by simply typing `/` and then `1`. Asides from that, it also allows you to:
 
-## Available Scripts
+- Delete text blocks simply by backspacing or pressing the delete key.
+- Edit/update your text block. Everybody deserves a second chance. Editr allows you to correct your mistakes, 'Type'ically speaking that is.
+- You can also create H2 texts by typing `/` then `2`. We know size does matter, but in this case, sometimes you just don't want **BIG** stuff all the time.
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- JavaScript
+- React.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Click [here](https://super-space-hub.netlify.app/) to view the live demo.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow these simple steps.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A web browser (e.g. Mozilla Firefox, Google Chrome etc.)
+- git: This is a version control system used for source code management.
+- A text editor (e.g Visual Studio Code (recommended), Sublime Text, Atom etc.)
+- Browser Engine on your terminal preferably NodeJs
+- Knowledge of HTML, CSS, JavaScript and React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- With git, clone the code to your machine, or download a ZIP of all the files directly.
+- [Download the ZIP file from this location](https://github.com/shaqdeff/Editr/archive/refs/heads/develop.zip) or run the following [git](https://git-scm.com/) command to clone the files to your machine:
 
-### `npm run eject`
+```
+git clone https://github.com/shaqdeff/Editr.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Once the files are on your machine, open the **Editr** folder in [Visual Studio Code](https://code.visualstudio.com/download).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal (**Shortcut**: `Command` + `J` or `Control` + ` ` `) and run the following commands:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm install
+```
 
-## Learn More
+This will install all the packages and dependencies used in the project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run the following command to start a live server on your computer
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will open up the project on a browser on `https://localhost:3000`.
 
-### Analyzing the Bundle Size
+## Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Run the following command to run the test suite.
 
-### Making a Progressive Web App
+```
+npm test a
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will run all the unit tests written for the app.
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Shaquille Ndunda**
 
-### Deployment
+- GitHub: [@shaqdeff](https://github.com/shaqdeff)
+- Twitter: [@shaquillendunda](https://twitter.com/shaquillendunda)
+- LinkedIn: [Shaquille Ndunda](https://www.linkedin.com/in/shaquille-ndunda/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Helpjuice.com

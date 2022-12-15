@@ -1,0 +1,13 @@
+.text-block {
+  margin: 11rem auto -9.5rem;
+  background: none;
+  width: 50%;
+  outline: none;
+}
+
+[contenteditable='true']:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: rgb(142, 142, 142);
+  font-size: 16px;
+}
