@@ -82,8 +82,8 @@ const EditorPage = () => {
         <h1 className="heading">Front-end developer test project</h1>
         <hr className="underline" />
         <p className="instruction">
-          Hey there! 👋 You can add content below. Type / then 1 to create H1
-          text. Hit 'Return or Enter' after typing in your text.
+          Hey there! 👋 Feel free to add content below. Type / then 1 to create
+          H1 text. Hit 'Return or Enter' after typing in your text.
         </p>
       </div>
     </div>
