@@ -29,7 +29,7 @@ To get a local copy up and running follow these simple steps.
 ### Setup
 
 - With git, clone the code to your machine, or download a ZIP of all the files directly.
-- [Download the ZIP file from this location](https://github.com/shaqdeff/Editr/archive/refs/heads/develop.zip) or run the following [git](https://git-scm.com/) command to clone the files to your machine:
+- [Download the ZIP file from this location](https://github.com/shaqdeff/Editr/archive/refs/heads/main.zip) or run the following [git](https://git-scm.com/) command to clone the files to your machine:
 
 ```
 git clone https://github.com/shaqdeff/Editr.git
