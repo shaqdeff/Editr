@@ -12,7 +12,7 @@ Editr is a Notion like text editor that allows you to create a H1 text block by 
 
 ## Live Demo
 
-- Click [here](https://super-space-hub.netlify.app/) to view the live demo.
+- Click [here](https://editr.herokuapp.com/) to view the live demo.
 
 ## Getting Started
 
