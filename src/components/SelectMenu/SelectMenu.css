@@ -1,6 +1,6 @@
 .select-popup {
   position: absolute;
-  width: 6.875rem;
+  width: 25rem;
   height: 9rem;
   z-index: 11;
   display: flex;
@@ -9,14 +9,13 @@
 }
 
 .select-popup .items {
-  background: #fafafa;
+  background: #d3d2d2;
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
-  border-radius: 0.5rem;
 }
 
 .select-popup .items div[role='button'] {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid f5f6fb;
@@ -37,19 +36,10 @@
   cursor: pointer;
 }
 
-.select-popup .items div[role='button']:first-of-type:hover,
-.select-popup .items div[role='button']:first-of-type:focus {
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-
-.select-popup .items div[role='button']:last-of-type:hover,
-.select-popup .items div[role='button']:last-of-type:focus {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
 .selected {
   background: #f5f6fb;
-  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }

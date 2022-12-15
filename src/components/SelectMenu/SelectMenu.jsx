@@ -1,28 +1,19 @@
 import React from 'react';
+import { RxText } from 'react-icons/rx';
 import { matchSorter } from 'match-sorter';
 import './SelectMenu.css';
 
-const MENU_HEIGHT = 150;
+const MENU_HEIGHT = 30;
 const allowedTags = [
   {
-    id: 'page-title',
+    id: 'heading1',
     tag: 'h1',
-    label: 'Page Title',
+    label: 'Heading 1',
   },
   {
-    id: 'heading',
+    id: 'heading2',
     tag: 'h2',
-    label: 'Heading',
-  },
-  {
-    id: 'subheading',
-    tag: 'h3',
-    label: 'Subheading',
-  },
-  {
-    id: 'paragraph',
-    tag: 'p',
-    label: 'Paragraph',
+    label: 'Heading 2',
   },
 ];
 
@@ -80,6 +71,18 @@ class SelectMenu extends React.Component {
         const nextSelected = selected === items.length - 1 ? 0 : selected + 1;
         this.setState({ selectedItem: nextSelected });
         break;
+      case 'Control':
+      case 'Shift':
+        e.preventDefault();
+        break;
+      case 'Alt':
+        e.preventDefault();
+        this.props.close();
+        break;
+      case 'Command':
+      case 'Meta':
+        e.preventDefault();
+        break;
       default:
         this.setState({ command: this.state.command + e.key });
         break;
@@ -105,6 +108,7 @@ class SelectMenu extends React.Component {
                 role="button"
                 tabIndex="0"
                 onClick={() => this.props.onSelect(item.tag)}>
+                <RxText style={{ fontSize: '24px', color: '#707070' }} />
                 {item.label}
               </div>
             );

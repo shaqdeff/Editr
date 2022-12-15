@@ -17,7 +17,7 @@ class TextBlock extends React.Component {
     this.tagSelectionHandler = this.tagSelectionHandler.bind(this);
     this.contentEditable = React.createRef();
     this.state = {
-      htmlBackup: null, // needed to store the html temporarely
+      htmlBackup: null, // needed to store the html temporarily
       html: '',
       tag: 'p',
       previousKey: '',
@@ -95,7 +95,7 @@ class TextBlock extends React.Component {
   // closes the menu after the next click - regardless of outside or inside menu.
   openSelectMenuHandler() {
     const { x, y } = getCursorCoordinates();
-    this.setCursor({
+    this.setState({
       selectMenuIsOpen: true,
       selectMenuPosition: { x, y },
     });
@@ -138,6 +138,7 @@ class TextBlock extends React.Component {
           onChange={this.onChangeHandler}
           onKeyDown={this.onKeyDownHandler}
           onKeyUp={this.onKeyUpHandler}
+          placeholder={'Type / for blocks, @ to link docs or people'}
         />
       </>
     );

@@ -112,14 +112,14 @@ body {
 
 .heading {
   font-size: 40px;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: flex - start;
 }
 
 .underline {
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   background-color: #d1d1d1;
   border: none;
   height: 1.2px;
@@ -128,7 +128,7 @@ body {
 .instruction {
   display: flex;
   justify-content: flex - start;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   font-size: 18px;
   font-weight: 400;
   color: #989898;

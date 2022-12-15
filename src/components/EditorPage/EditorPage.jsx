@@ -7,7 +7,6 @@ import {
 } from 'react-icons/fi';
 import { HiDotsVertical } from 'react-icons/hi';
 import rabbit from '../../assets/rabbit.png';
-import TextEditor from '../TextEditor/TextEditor';
 import './EditorPage.css';
 
 const EditorPage = () => {
@@ -55,7 +54,6 @@ const EditorPage = () => {
           text. Hit 'Return or Enter' after typing in your text.
         </p>
       </div>
-      <TextEditor />
     </div>
   );
 };
