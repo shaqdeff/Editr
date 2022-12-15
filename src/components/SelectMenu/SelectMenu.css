@@ -9,7 +9,7 @@
 }
 
 .select-popup .items {
-  background: #d3d2d2;
+  background: #ebebeb;
   box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
     rgba(15, 15, 15, 0.1) 0px 3px 6px, rgba(15, 15, 15, 0.2) 0px 9px 24px;
   border-radius: 10px;
@@ -19,12 +19,7 @@
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid f5f6fb;
-}
-
-.select-popup .items div[role='button']:hover {
-  background: #f5f6fb;
-  cursor: pointer;
+  border-bottom: 1px solid #f5f6fb;
 }
 
 .select-popup .items div[role='button']:last-of-type {
@@ -33,12 +28,12 @@
 
 .select-popup .items div[role='button']:hover,
 .select-popup .items div[role='button']:focus {
-  background: #f5f6fb;
+  background: #bebebe;
   cursor: pointer;
 }
 
 .selected {
-  background: #f5f6fb;
+  background: #bebebe;
   display: flex;
   align-items: center;
   justify-content: flex-start;
