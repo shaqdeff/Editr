@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextEditor renders correctly 1`] = `
+<div
+  className="Page"
+>
+  <p
+    className="text-block"
+    contentEditable={true}
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+    onBlur={[Function]}
+    onChange={[Function]}
+    onInput={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    placeholder="Type / for blocks, @ to link docs or people"
+  />
+</div>
+`;
