@@ -120,7 +120,6 @@ class TextBlock extends React.Component {
           onChange={this.onChangeHandler}
           onKeyDown={this.onKeyDownHandler}
           onKeyUp={this.onKeyUpHandler}
-          // change default placeholder according to which tag user selects with if statement
           placeholder={
             this.state.tag === 'h1'
               ? 'Heading 1'
