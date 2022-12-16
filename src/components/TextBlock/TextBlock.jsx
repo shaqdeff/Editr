@@ -120,7 +120,14 @@ class TextBlock extends React.Component {
           onChange={this.onChangeHandler}
           onKeyDown={this.onKeyDownHandler}
           onKeyUp={this.onKeyUpHandler}
-          placeholder={'Type / for blocks, @ to link docs or people'}
+          // change default placeholder according to which tag user selects with if statement
+          placeholder={
+            this.state.tag === 'h1'
+              ? 'Heading 1'
+              : this.state.tag === 'h2'
+              ? 'Heading 2'
+              : 'Type / for blocks, @ to link docs or people'
+          }
         />
       </>
     );
