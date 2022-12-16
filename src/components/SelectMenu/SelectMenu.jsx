@@ -53,8 +53,6 @@ class SelectMenu extends React.Component {
       case 'Enter':
         e.preventDefault();
         this.props.onSelect(items[selected].tag);
-        // add placeholder for item selected
-        this.setState({ command: '', items: allowedTags });
         break;
       case 'Backspace':
         if (!command) this.props.close();

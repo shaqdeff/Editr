@@ -86,7 +86,7 @@ body {
 
 .menu-bar {
   display: flex;
-  height: 50%;
+  height: 55%;
   margin-top: 4rem;
   border: 1px solid #e9e9e9;
   border-radius: 10px;
@@ -111,8 +111,8 @@ body {
 }
 
 .profile-icon {
-  width: 25px;
-  height: 30px;
+  width: 28px;
+  height: 35px;
   background-color: #d8f8e5;
   margin-left: 1rem;
   border-radius: 5px;
@@ -146,15 +146,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: #9d9d9d;
   gap: 0.5rem;
 }
 
 .rabbit-container {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   background-color: #eb7379;
   display: flex;
   align-items: flex-end;
@@ -172,14 +172,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   color: #9d9d9d;
   gap: 0.5rem;
 }
 
 .heading {
-  font-size: 40px;
+  font-size: 48px;
   margin-top: 2rem;
   display: flex;
   justify-content: flex - start;
