@@ -25,7 +25,7 @@ export const createPopup = (block) => {
   );
 
   popup.innerHTML = `
-        <h2 class="text-[14px] font-bold ml-2 mt-2">Add block</h2>
+        <h2 class="text-[14px] font-bold ml-2 mt-2">Add blocks</h2>
         <p class="text-[12px] font-semibold text-gray-300 ml-2 mt-1">
           Keep typing to filter, or escape to exit
         </p>
