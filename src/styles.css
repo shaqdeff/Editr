@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[contenteditable][placeholder]:empty::before {
+  content: attr(placeholder);
+  position: absolute;
+  color: rgb(175, 175, 175);
+  font-size: 14px;
+  background-color: transparent;
+}
