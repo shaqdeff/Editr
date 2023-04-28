@@ -1,4 +1,6 @@
 import { showPopup, removePopup } from './popup.js';
+import createH1 from './createH1.js';
+import createBlock from './createBlock.js';
 
 const blockInput = (block = document.querySelector('.block')) => {
   block.addEventListener('keydown', (e) => {
