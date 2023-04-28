@@ -9,3 +9,12 @@
   font-size: 14px;
   background-color: transparent;
 }
+
+/* h1 placeholder */
+.edit-heading[contenteditable][placeholder]:empty:before {
+  content: attr(placeholder);
+  position: absolute;
+  color: rgb(211, 211, 211);
+  font-size: 32px;
+  background-color: transparent;
+}
