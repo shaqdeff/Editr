@@ -59,3 +59,27 @@ export const createPopup = (block) => {
   // append popup to block
   block.after(popup);
 };
+
+// function for showing popup
+export const showPopup = (block) => {
+  // check if popup exists
+  if (!document.querySelector('.popup')) {
+    createPopup(block);
+  }
+};
+
+// function for removing popup
+export const removePopup = () => {
+  const popup = document.querySelector('.popup');
+  if (popup) {
+    popup.remove();
+  }
+};
+
+// remove popup on click outside of popup
+document.addEventListener('click', (e) => {
+  const popup = document.querySelector('.popup');
+  if (e.target !== popup) {
+    removePopup();
+  }
+});
