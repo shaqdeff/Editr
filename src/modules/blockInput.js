@@ -101,6 +101,57 @@ const blockInput = (block = document.querySelector('.block')) => {
         blockInput(newBlock);
       }
     }
+
+    // if key is backspace, block is empty, and block id is not not
+    if (
+      e.key === 'Backspace' &&
+      block.textContent.length === 0 &&
+      block.id !== '1'
+    ) {
+      const previousBlock = block.previousElementSibling;
+      // remove block
+      block.remove();
+      // if previous block is a h1 element
+      if (previousBlock) {
+        if (previousBlock.nodeName === 'H1') {
+          previousBlock.setAttribute('placeholder', 'Heading 1');
+        }
+        // if previous block is not h1 element
+        if (previousBlock.nodeName !== 'H1') {
+          previousBlock.setAttribute(
+            'placeholder',
+            'Type / for blocks, @ to link docs or people'
+          );
+        }
+      }
+      // add content at the end of previous block to get cursor at the end
+      if (previousBlock) {
+        previousBlock.textContent += '1';
+      }
+      // if previous block is contenteditable
+      if (previousBlock) {
+        previousBlock.focus();
+        if (previousBlock.contentEditable === 'true') {
+          const range = document.createRange();
+          // get contents of previous block
+          range.selectNodeContents(previousBlock);
+          range.collapse(false);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          previousBlock.dispatchEvent(new InputEvent('input'));
+        } else {
+          const input = previousBlock.querySelector('input:last-child');
+          if (input) {
+            input.focus();
+            input.setSelectionRange(
+              input.textContent.length,
+              input.textContent.length
+            );
+          }
+        }
+      }
+    }
   });
 };
 
