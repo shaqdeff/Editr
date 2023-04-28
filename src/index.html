@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Editr</title>
+  </head>
+  <body>
+    <main class="relative mt-4">
+      <!-- Navigation -->
+
+      <div class="flex justify-between items-center mx-6 mt-3">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-angles-right mr-6 text-sm text-gray-600"></i>
+          <i class="fa fa-book-open text-gray-300"></i>
+          <span class="text-sm text-gray-500 font-bold">Main</span>
+          <span class="text-base text-gray-300 ml-1">/</span>
+          <span class="text-sm text-gray-300 font-medium ml-1"
+            >Getting started</span
+          >
+          <span class="text-base text-gray-300 ml-1">/</span>
+          <span class="text-sm text-gray-300 font-medium ml-1"
+            >Front-end developer test proje...</span
+          >
+        </div>
+        <div class="flex gap-2 items-center">
+          <i class="fa fa-unlock text-gray-300 text-sm"></i>
+          <span class="text-sm text-gray-300 font-medium">Editing</span>
+          <span class="text-base text-gray-300 mx-2">|</span>
+          <span class="text-sm font-medium text-blue-900">Publish Space</span>
+          <i class="fa fa-chevron-down text-xs text-blue-900"></i>
+        </div>
+      </div>
+
+      <!-- Main -->
+      <div
+        class="flex justify-between items-center border border-solid border-gray-200 rounded-md shadow bg-white mx-auto mt-10 w-1/2 h-10"
+      >
+        <div class="flex items-center">
+          <div
+            class="w-[22px] h-[25px] bg-green-100 ml-2 rounded-sm flex items-center justify-center"
+          >
+            <span class="text-sm text-green-600">P</span>
+          </div>
+          <span class="text-xs text-gray-300 mx-2">|</span>
+          <img
+            src="./assets/clock.png"
+            alt="Clock"
+            class="w-3 h-3 fill-gray-300"
+          />
+          <span class="text-xs ml-1 text-gray-300">0min</span>
+          <span class="text-xs text-gray-300 mx-2">|</span>
+          <img src="./assets/bunny.png" alt="Bunny" class="w-[20px] h-[20px]" />
+          <span class="text-xs text-gray-300 mx-2">|</span>
+          <img
+            src="./assets/down-left-arrow.png"
+            alt="Down Left Arrow"
+            class="w-[13px] h-[13px]"
+          />
+          <span class="text-xs ml-1 text-gray-400">0</span>
+        </div>
+
+        <div class="flex items-center mx-3">
+          <img
+            src="./assets/check.png"
+            alt="Check Mark"
+            class="w-[20px] h-[20px] mx-[5px]"
+          />
+          <img
+            src="./assets/cloud.png"
+            alt="Cloud"
+            class="w-[16px] h-[16px] mr-3"
+          />
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-7 w-1/2">
+        <h1 class="mx-auto text-4xl font-bold">
+          Front-end developer test project
+        </h1>
+        <hr class="w-[100%] mt-3 bg-gray-400" />
+        <p class="mt-4 w-[100%] text-sm text-gray-500">
+          Your goal is to make a page that looks exactly like this one, and has
+          the ability to create H1 text simply by typing / then 1, then typing
+          text, and hitting enter.
+        </p>
+      </div>
+
+      <section>
+        <div
+          contenteditable="true"
+          id="1"
+          placeholder="Type / for blocks, @ to link docs or people"
+          class="block w-1/2 mx-auto mt-10 -mb-5 outline-none text-sm"
+        ></div>
+      </section>
+    </main>
+  </body>
+</html>
