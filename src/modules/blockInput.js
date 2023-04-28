@@ -13,6 +13,17 @@ const blockInput = (block = document.querySelector('.block')) => {
     if (e.key === 'Escape' || e.key === 'Backspace') {
       removePopup();
     }
+
+    if (e.key === '1') {
+      // select first item in popup
+      const items = document.getElementById('items');
+      if (items) {
+        const item = items.querySelector(`[data-id="1"]`);
+        if (item) {
+          item.classList.add('bg-gray-100');
+        }
+      }
+    }
   });
 };
 
