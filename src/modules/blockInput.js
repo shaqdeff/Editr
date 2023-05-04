@@ -47,7 +47,7 @@ const blockInput = (block = document.querySelector('.block')) => {
           // if key is enter and h1 is empty
           if (e.keyCode === 13 && h1.textContent.trim() === '') {
             e.preventDefault();
-            // remove h1 placeholder
+            // // remove h1 placeholder
             h1.setAttribute('placeholder', '');
             // create a new block div
             const newBlock = createBlock(block, block.id);

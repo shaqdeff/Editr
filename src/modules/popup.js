@@ -1,3 +1,6 @@
+import createH1 from './createH1.js';
+import createBlock from './createBlock.js';
+
 export const popupList = [
   {
     id: 1,
@@ -55,6 +58,14 @@ export const createPopup = (block) => {
         </div>
 
     `;
+
+  const items = document.getElementById('items');
+  const item = document.querySelector(`[data-id="1"]`);
+
+  // add click event listener to item
+  // item.addEventListener('click', () => {
+  //   createH1(block, block.id);
+  // });
 
   // append popup to block
   block.after(popup);
